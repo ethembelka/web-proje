@@ -1,0 +1,71 @@
+
+
+.header {
+    background-color: #2C3E50;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.video {
+    margin: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.nfk {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #fff;
+}
+
+.acz {
+    background-color: cyan;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #fff;
+}
+
+.bayazit {
+    background-color: burlywood;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #fff;
+}
+
+.pakdil {
+    background-color: darkkhaki;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #fff;
+}
+
+.ainan {
+    background-color: dodgerblue;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #fff;
+}
+
+.rasim {
+    background-color: dimgrey;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #fff;
+}
+
+.alaaddin {
+    background-color: darksalmon;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #fff;
+}
+
+footer {
+    background-color: #2C3E50;
+}
+
+@media screen and (max-width: 600px) {
+    iframe {
+        height: 300px;
+    }
+}
