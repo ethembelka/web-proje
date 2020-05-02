@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    
+    
+    <title>Giriş Yap</title>
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg fixed-top p-4">
+       <div class="container">
+           <a href="login.html" class="navbar-brand">GİRİŞ YAP</a>
+           
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i class="fas fa-bars" id="icon"></i>
+           </button>
+           
+           <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+               <ul class="navbar-nav ml-auto">
+                   <li class="nav-item pl-4">
+                       <a href="../anasayfa/anasayfa.html" class="nav-link">ANASAYFA</a>
+                   </li>
+                    <li class="nav-item pl-4">
+                       <a href="../hakkimda/hakkimda.html" class="nav-link">HAKKIMDA</a>
+                   </li>
+                   <li class="nav-item pl-4">
+                       <a href="../cv/cv.html" class="nav-link">CV</a>
+                   </li>
+                    <li class="nav-item pl-4">
+                       <a href="../sehrim/sehrim.html" class="nav-link">ŞEHRİM</a>
+                   </li>
+                   <li class="nav-item pl-4">
+                       <a href="../iletisim/iletisim.html" class="nav-link">İLETİŞİM</a>
+                   </li>
+                   <li class="nav-item pl-4">
+                       <a style="font-size: 20px;" href="login.html" class="nav-link">
+                           <i id="login" class="fas fa-sign-in-alt"></i>
+                       </a>
+                   </li>
+               </ul>
+           </div>
+       </div>
+   </nav>
+   
+    <div class="formkapsam">
+        <form action="kontrol.php" method="POST" id="frm">
+            <img src="img/user.png" alt="kullanici">
+            
+            <h3>GİRİŞ YAP</h3>
+            
+            <div><input onblur="adKontrol()" type="text" name="kulAdi" required="" id="ad"><label for="">Kullanıcı Adı</label></div>
+            <div><input onblur="sifreKontrol()" type="password" name="sifre" required="" id="sifre"><label for="">Şifre</label></div>
+            
+            <button>GİRİŞ</button>
+        </form>
+    </div>
+    
+    
+    <div class="uyari" id="uyariVer">
+        
+    </div>
+
+
+<script src="script.js"></script>   
+   
+   
+   
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</body>
+</html>

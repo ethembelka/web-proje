@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(img/arkaplan.jpg);
+    background-size: cover;
+}
+
+/*NAVBAR*/
+.navbar {
+    background-color: #2C3E50;
+    font-family: Montserrat;
+    opacity: 0.7;
+}
+.navbar-brand {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}
+.navbar-brand:hover {
+    color: #18bc9c;
+}
+.nav-link {
+    color: #fff;
+    font-weight: 700;    
+    font-size: 16px;
+}
+#icon {
+    color: #fff;
+}
+.nav-link:hover {
+    color: #18bc9c;
+}
+
+/*Form*/
+
+.formkapsam {
+    width: 300px;
+    height: 350px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 40%;
+    top: 30%;
+}
+
+.formkapsam img {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -30px;
+    left: 120px;
+}
+
+.formkapsam h3 {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    margin-bottom: 30px;
+    color: #f0f0DF;
+}
+
+.formkapsam input {
+    width: 80%;
+    left: 5%;
+    position: relative;
+    padding: 10px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;px;
+    color: #fff;
+}
+
+.formkapsam button {
+    width: 90%;
+    left: 5%;
+    position: relative;
+    padding: 10px;
+    background: #FAA21B;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.formkapsam label {
+    position: relative;
+    display: block;
+    top: -47px;
+    left: 29px;
+    pointer-events: none;
+    color: #f0f0DF;
+}
+
+.formkapsam input:focus ~ label,
+.formkapsam input:valid ~ label{
+    color: #FAA21B;
+    top: -60px;
+    font-size: 12px;
+    transition: 0.5s;
+}
+
+.formkapsam input:focus {
+    border-bottom: 1px solid #FAA21B;
+}
+
+/*Form Denetleme*/
+
+.uyari {
+    position: absolute;
+    left: 40%;
+    top: 80%;
+    color: #fff;
+}
+
+p {
+    text-align: center;
+    font-weight: 700;
+}
+
+
+/*Responsive*/
+
+@media (max-width:768px) {
+    .formkapsam {
+        left: 25%;
+    }
+    .uyari {
+        left: 25%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

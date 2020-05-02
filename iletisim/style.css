@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: #4FC5B0;
 }
 /*NAVBAR*/
 .navbar {
@@ -34,4 +34,36 @@ footer {
 
 form {
     margin-top: 150px;
+    //background-color: rgb(151,140,139);
+    background-color: #9CA09E;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
+
+.sosyal {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sosyal i {
+    font-size: 40px;
+}
+a {
+    color: #080C56;
+}
+a:hover {
+    color: #fff;
+}
+
+.butonlar {
+    text-align: center;
+}
+
+.btn {
+    background-color: #18bc9c;
+    color: #fff;
+}
+.btn:hover {
+    background-color: #fff;
+}
+

@@ -1,11 +1,12 @@
 body {
-    background-color: #18BC9C;
+    background-color: #72AFAD;
 }
 
 /*NAVBAR*/
 .navbar {
     background-color: #2C3E50;
     font-family: Montserrat;
+    opacity: 0.8;
 }
 .navbar-brand {
     font-size: 32px;
@@ -31,35 +32,24 @@ body {
 
 .text {
     padding: 10px;
-    background-color: antiquewhite;
-    border-radius: 5px;
+    background-color: #F7F7F0;
+    border-radius: 15px;
     margin-top: 120px;
-    margin-right: 50px;
-    margin-left: 50px;
+    //margin-right: 50px;
+    //margin-left: 50px;
     letter-spacing: 1px;
     word-spacing: 2px;  
 }
 
-.hobiler {
-    width: 50%;
-    float: left;
-
-}
-
-.etkinlikler {
-    width: 50%;
-    float: left;
-}
-
 .media {
-    background-color: antiquewhite;
+    background-color: #F7F7F0;
     padding: 10px;
-    margin: 10px;
+    //margin: 10px;
     border-radius: 10px;
 }
 
 img {
-    width: 25%;
+    width: 50%;
     float: left;
 }
 
@@ -70,16 +60,16 @@ span {
     color: red;
 }
 
-@media screen and (max-width: 700px) {
-    .hobiler {
-        width: auto;
-    }
-    .etkinlikler {
-        width: auto;
-    }
-    img {
-        width: 50%;
-    }
+
+
+footer {
+    width: auto;
+    background-color: #2C3E50;
+    padding: 30px;
+    text-align: center;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 500;
 }
 
 

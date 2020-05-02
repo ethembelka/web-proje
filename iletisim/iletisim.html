@@ -19,7 +19,7 @@
   
    <nav class="navbar navbar-expand-lg fixed-top p-4">
        <div class="container">
-           <a target="_blank" href="iletisim.html" class="navbar-brand">İLETİŞİM</a>
+           <a href="iletisim.html" class="navbar-brand">İLETİŞİM</a>
            
            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <i class="fas fa-bars" id="icon"></i>
@@ -38,13 +38,13 @@
                        <a href="../cv/cv.html" class="nav-link">CV</a>
                    </li>
                    <li class="nav-item pl-4">
-                       <a href="sehrim.html" class="nav-link">ŞEHRİM</a>
+                       <a href="../sehrim/sehrim.html" class="nav-link">ŞEHRİM</a>
                    </li>
                    <li class="nav-item pl-4">
-                       <a style="font-size: 20px;" href="#" class="nav-link">İLETİŞİM</a>
+                       <a style="font-size: 20px;" href="iletisim.html" class="nav-link">İLETİŞİM</a>
                    </li>
                    <li class="nav-item pl-4">
-                       <a href="#" class="nav-link">
+                       <a href="../login/login.html" class="nav-link">
                            <i id="login" class="fas fa-sign-in-alt"></i>
                        </a>
                    </li>
@@ -56,91 +56,124 @@
    
    <div class="container">
        
-       <form>
-           
-           <div class="form-group">
-               <label for="name">İSİM</label>
-               <input type="text" id="name" class="form-control" placeholder="İsminizi Giriniz">
+       <form id="frm" action="gonder.php" method="POST">
+           <div class="row">
+              <div class="col-md-6">
+                   <div class="form-group">
+                       <label for="name">İSİM</label>
+                       <input onblur="adKontrol()" name="isim" type="text" id="ad" class="form-control" placeholder="İsminizi Giriniz">
+                   </div>
+              </div>
+              <div class="col-md-6">
+                   <div class="form-group">
+                       <label for="surname">SOYİSİM</label>
+                       <input onblur="soyadKontrol()" name="soyisim" type="text" id="surname" class="form-control" placeholder="Soyisminizi Giriniz">
+                   </div>
+               </div>
            </div>
            
-           <div class="form-group">
-               <label for="surname">SOYİSİM</label>
-               <input type="text" id="surname" class="form-control" placeholder="Soyisminizi Giriniz">
+           <div class="row">
+              <div class="col-md-6">
+                   <div class="form-group">
+                       <label for="email">E-MAİL</label>
+                       <input onblur="emailKontrol()" name="email" type="email" id="email" class="form-control" placeholder="Mailinizi Giriniz / example@gmail.com">
+                   </div>
+               </div>
+               
+               <div class="col-md-6">
+               <div class="form-group">
+                   <label for="sifre">ŞİFRE</label>
+                   <input onblur="sifreKontrol()" name="sifre" type="password" id="sifre" class="form-control" placeholder="Şifrenizi Giriniz">
+               </div>
+               </div>
            </div>
            
-           <div class="form-group">
-               <label for="email">E-MAİL</label>
-               <input type="email" id="email" class="form-control" placeholder="Mail Giriniz">
-               <small class="form-text text-muted">
-                   Lütfen bu alana mailinizi giriniz!!
-               </small>
-           </div>
-           
-           <div class="form-group">
-               <label for="sifre">ŞİFRE</label>
-               <input type="password" id="sifre" class="form-control" placeholder="Şifrenizi Giriniz">
-           </div>
-           
-           <div class="form-group">
+           <div class="row">
+              <div class="col-md-6">
+                   <div class="form-group">
                <label for="city">ŞEHİR</label>
                <select name="city" id="city" class="form-control">
-                   <option value="kovaeli">Kocaeli</option>
+                   <option value="kocaeli">Kocaeli</option>
                    <option value="ankara">Ankara</option>
                    <option value="istanbul">İstanbul</option>
-                   <option value="maras">Kahramanmaraş</option>
+                   <option value="kahramanmaras">Kahramanmaraş</option>
                </select>
            </div>
-           
+              </div>
+              
+            <div class="col-md-4">
+                <div class="form-group">
+                   <legend>Hobiler</legend>
+                   <div class="row">
+                  <div class="col-lg-5">
+                       <div class="form-check">
+                           <label class="form-check-label">
+                               <input name="hobiler[]" value="Koşmak" type="checkbox"> Koşmak
+                           </label>
+                       </div>
+                       <div class="form-check">
+                           <label class="form-check-label">
+                               <input name="hobiler[]" value="Yüzmek" type="checkbox"> Yüzmek
+                           </label>
+                       </div>
+                   </div>
+                   <div class="col-lg-7">
+                       <div class="form-check">
+                           <label class="form-check-label">
+                               <input name="hobiler[]" value="Sinemaya Gitmek" type="checkbox">Sinemaya Gitmek
+                           </label>
+                       </div>
+                       <div class="form-check">
+                           <label class="form-check-label">
+                               <input name="hobiler[]" value="Spor Yapmak" type="checkbox">Spor Yapmak
+                           </label>
+                       </div>
+                       <div class="form-check">
+                           <label class="form-check-label">
+                               <input name="hobiler[]" value="Kod Yazmak" type="checkbox">Kod Yazmak
+                           </label>
+                       </div>
+                   </div>
+               </div>
+               </div>
+            </div>
+              
+              
+               <div class="col-md-2">
+                    <div class="form-group">
+                        <legend>Cinsiyet</legend>
+                        <div class="form-radio">
+                            <label class="ml-3" for="erkek">
+                                 <input onblur="cinsiyetKontrol()" id="erkek" name="cinsiyet" type="radio" value="Erkek">Erkek
+                            </label>
+                            <label class="ml-3" for="erkek">
+                                <input onblur="cinsiyetKontrol()" id="kadın" name="cinsiyet" type="radio" value="Kadın">Kadın
+                            </label>
+                        </div>
+                   </div>
+               </div>
+           </div>
            <div class="form-group">
                <label for="message">MESAJ</label>
-               <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
+               <textarea onblur="mesajKontrol()" name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Mesajınızı Giriniz"></textarea>
            </div>
            
-           <div class="form-group">
-               <legend>Hobiler</legend>
-               <div class="form-check">
-                   <label class="form-check-label">
-                       <input type="checkbox"> Koşmak
-                   </label>
-               </div>
-               <div class="form-check">
-                   <label class="form-check-label">
-                       <input type="checkbox"> Yüzmek
-                   </label>
-               </div>
-               <div class="form-check">
-                   <label class="form-check-label">
-                       <input type="checkbox"> Sinemaya Gitmek
-                   </label>
-               </div>
-               <div class="form-check">
-                   <label class="form-check-label">
-                       <input type="checkbox"> Spor Yapmak
-                   </label>
-               </div>
-               <div class="form-check">
-                   <label class="form-check-label">
-                       <input type="checkbox"> Kod Yazmak
-                   </label>
-               </div>
-           </div>
-           
-           <div class="form-group">
-              <legend>Cinsiyet</legend>
-               <div class="form-radio">
-                   <label for="erkek">
-                       <input name="cinsiyet" type="radio">Erkek
-                   </label>
-               </div>
-               <div class="form-radio">
-                   <label for="erkek">
-                       <input name="cinsiyet" type="radio">Kadın
-                   </label>
-               </div>
+           <div class="container butonlar">
+               <input class="btn btn-lg" type="submit" name="gonder" value="Gönder" onclick="clickEvent()">
+               <input class="btn btn-lg" type="reset" value="Temizle">
            </div>
            
        </form>
        
+   </div>
+   
+   <div class="container">
+       <div class="sosyal">
+           <a target="_blank" href="https://www.facebook.com/shn.ethembelka"><i class="fab fa-facebook-square"></i></a>
+           <a target="_blank" href="https://www.instagram.com/ethembelka_sahin/"><i class="fab fa-instagram"></i></a>
+           <a target="_blank" href="https://twitter.com/BelkaEthem"><i class="fab fa-twitter-square"></i></a>
+           <a target="_blank" href="https://www.linkedin.com/in/ethem-belka-%C5%9Fahin-342556110/"><i class="fab fa-linkedin"></i></a>
+       </div>
    </div>
    
    
@@ -167,10 +200,7 @@
    
    
    
-   
-   
-   
-   
+<script src="script.js"></script>
    
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

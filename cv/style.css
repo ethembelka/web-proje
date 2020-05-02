@@ -26,32 +26,41 @@ body {
 .nav-link:hover {
     color: #18bc9c;
 }
-.tbody {
-    margin-top: 100px;
-    padding-top: 20px;
-}
+
+
+/*TABLE*/
+
 .head-table {
     text-align: center;
     color: #fff;
 }
+
+table {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.tbody {
+    margin-top: 100px;
+    padding-top: 20px;
+}
+
 img {
     width: 200px;
 }
-table {
-    text-align: center;
-}
-table th {
-    color: #fff;
-}
+
+
 a {
-    color: brown;
+    color: #0C4522;
 }
-table td {
-    color: chocolate;
-}
+
 .table td {
     vertical-align: middle;
 }
+
+/*CV/TEXT*/
+
 .text {
     margin-top: 50px;
     background-color: #fff;
@@ -62,6 +71,9 @@ table td {
 .text h2 {
     text-align: center;
 }
+
+
+
 footer {
     background-color: #2C3E50;
     font-family: Montserrat;
