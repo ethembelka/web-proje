@@ -15,3 +15,18 @@ function sifreKontrol() {
         document.getElementById('uyariVer').innerHTML= "<p>Lütfen Şifrenizi Giriniz</p>";
     }
 }
+
+function clickEvent() {
+    let kulAdi = "B181210061";
+    let sifre = "123";
+    
+    let girilenAd = document.getElementById('frm').kulAdi.value;
+    let girilenSifre = document.getElementById('frm').sifre.value;
+    
+    if(kulAdi == girilenAd && sifre == girilenSifre) {
+        alert("Başarılı Giriş");
+    }
+    else {
+        alert("Kullanıcı Adı Veya Şifre Hatalı");
+    }
+}
